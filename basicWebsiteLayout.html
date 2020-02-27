@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Basic Website Layout</title>
+    <style>
+        body{
+           padding: 50px; 
+        }
+        .logo{
+            float: left;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        .menu-item {
+            float: right;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: right;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .menu-item:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .breadcrumb {
+            padding: 10px 16px;
+            list-style: none;
+            background-color: #eee;
+        }
+        .breadcrumb li {
+            display: inline;
+            font-size: 18px;
+        }
+        .breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+        .breadcrumb li a {
+            color: #0275d8;
+            text-decoration: none;
+        }
+        .breadcrumb li a:hover {
+            color: #01447e;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home" class="logo">Your Logo</a>
+        <a href="#home" class="menu-item">Home</a>
+        <a href="#news" class="menu-item">News</a>
+        <div class="dropdown" class="menu-item">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div> 
+    </div>
+    <div class="breadcrumb-pagination">
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">
+                    Home
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Pictures
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    Summer 15
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
